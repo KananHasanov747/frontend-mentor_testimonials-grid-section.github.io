@@ -39,7 +39,6 @@ body { background-color: var(--light-grayish-blue); }
 }
 
 .testimonial {
-    border: 1px solid;
     border-radius: 10px;
 
     padding: 2rem;
