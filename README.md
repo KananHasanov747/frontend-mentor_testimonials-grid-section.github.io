@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://www.github.com/KananHasanov747)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [GitHub.io](https://kananhasanov747.github.io/frontend-mentor_testimonials-grid-section.github.io/)
 
 ## My process
 
