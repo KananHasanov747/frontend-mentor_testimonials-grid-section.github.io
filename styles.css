@@ -1,0 +1,134 @@
+/* defaults */
+
+@font-face {
+    font-family: BarlowSemiCondensed;
+    src: url("fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf");
+}
+
+:root {
+    /* primary */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* neutral */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body { background-color: var(--light-grayish-blue); }
+
+/* components */
+
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'one' 'two' 'three' 'four' 'five';
+
+    padding: 3rem;
+}
+
+.testimonial {
+    border: 1px solid;
+    border-radius: 10px;
+
+    padding: 2rem;
+    font-family: BarlowSemiCondensed;
+}
+
+@media (min-width: 710px) {
+    .testimonial-grid {
+        grid-template-areas:
+            'one one'
+            'two five'
+            'three five'
+            'four four';
+    }
+}
+
+@media (min-width: 900px) {
+    .testimonial-grid {
+        grid-template-areas:
+            'one one two five'
+            'three four four five';
+    }
+}
+
+.testimonial-1 {
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 3rem;
+    background-size: 7.5rem;
+
+    grid-area: one;
+}
+
+.testimonial-2 { grid-area: two; }
+.testimonial-3 { grid-area: three; }
+.testimonial-4 { grid-area: four; }
+.testimonial-5 { grid-area: five; }
+
+h1 { margin: 25px 0; }
+p { opacity: 75%; }
+.name { font-size: 15.3px; }
+
+.graduation {
+    font-size: 13px;
+    opacity: 50%;
+}
+
+img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex div {
+    margin-left: 20px;
+    line-height: 20px;
+}
+
+/* colors */
+
+.testimonial-1 {
+    background-color: var(--moderate-violet);
+}
+
+.testimonial-2 {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.testimonial-4 {
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.testimonial-3, .testimonial-5 {
+    background-color: var(--white);
+}
+
+.name, h1, p {
+    color: var(--white);
+}
+
+.testimonial-3 .name, .testimonial-3 h1, .testimonial-3 p,
+.testimonial-5 .name, .testimonial-5 h1, .testimonial-5 p {
+    color: var(--very-dark-grayish-blue);
+}
+
+.testimonial-4 img {
+    border: 2px solid var(--moderate-violet);
+}
